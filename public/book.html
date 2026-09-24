@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book &amp; Contact – Ironbark Barbers</title>
+  <meta name="description" content="Book your chair at Ironbark Barbers in Braamfontein. Choose a service, barber, date and time.">
+  <link rel="icon" href="/img/logo.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main>
+    <div class="page-head">
+      <div class="wrap">
+        <h1>Book your chair</h1>
+        <p>Choose a service, your barber and a time. You'll be able to add the appointment to your calendar straight after.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="wrap two top">
+        <div>
+           <div class="card advisor" id="advisor">
+  <h3>Not sure what to get?</h3>
+  <p>Describe your hair, or upload a photo, and our Style Advisor will suggest a cut and a barber.</p>
+
+  <form id="advisor-form" novalidate>
+    <label for="advisor-text">Describe your hair or occasion</label>
+    <textarea id="advisor-text" rows="3" maxlength="400" placeholder="e.g. Thick curly hair, low upkeep, I have an interview on Friday"></textarea>
+    <p class="hint">Please don't include personal details. Suggestions are guidance only, and your barber will confirm what suits you.</p>
+    <p class="msg error" id="advisor-msg" role="alert"></p>
+    <button class="btn dark" type="submit" id="advisor-btn">Get a suggestion</button>
+  </form>
+
+  <hr>
+
+  <form id="photo-form" novalidate>
+    <label for="photo-file">Or upload a photo of your hair</label>
+    <input type="file" id="photo-file" accept="image/*">
+    <img id="photo-preview" alt="Preview of your photo" hidden>
+    <label class="check"><input type="checkbox" id="photo-consent">
+      <span>I agree that my photo is sent to Google's Gemini AI service to generate a suggestion. This website does not store it. I am the person in the photo, or their parent or guardian.</span></label>
+    <p class="msg error" id="photo-msg" role="alert"></p>
+    <button class="btn dark" type="submit" id="photo-btn">Analyse my photo</button>
+  </form>
+
+  <div id="advisor-result" hidden aria-live="polite"></div>
+</div>
+          <form id="booking-form" class="card" novalidate>
+            <label for="service">Service</label>
+            <select id="service"></select>
+
+            <label for="barber">Barber</label>
+            <select id="barber"></select>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" required>
+
+            <label id="time-label">Time</label>
+            <div class="slots" id="slots" role="group" aria-labelledby="time-label">Loading times…</div>
+
+            <label for="name">Full name</label>
+            <input id="name" autocomplete="name" required>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" autocomplete="email" required>
+
+            <label for="phone">Phone</label>
+            <input id="phone" type="tel" autocomplete="tel" required>
+
+            <p class="msg error" id="form-msg" role="alert"></p>
+            <button class="btn dark" type="submit" id="submit-btn">Confirm booking</button>
+            <p class="hint">By booking you agree to our <a href="/terms.html">Terms &amp; Conditions</a>.</p>
+          </form>
+
+          <div class="confirm" id="confirm" hidden role="status"></div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h3>Contact &amp; hours</h3>
+            <p>42 Juta Street, Braamfontein<br>Johannesburg, 2017</p>
+            <p><a href="tel:+27115550142">011 555 0142</a><br>
+               <a href="mailto:hello@ironbarkbarbers.example">hello@ironbarkbarbers.example</a></p>
+            <table>
+              <tr><td>Mon–Fri</td><td>09:00–18:00</td></tr>
+              <tr><td>Saturday</td><td>08:00–16:00</td></tr>
+              <tr><td>Sunday</td><td>Closed</td></tr>
+            </table>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="/js/layout.js" defer></script>
+  <script src="/js/booking.js" defer></script>
+  <script src="/js/calendar.js" defer></script>
+  <script src="/js/advisor.js" defer></script>
+</body>
+</html>

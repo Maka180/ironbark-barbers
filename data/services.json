@@ -1,0 +1,8 @@
+[
+  { "id": "cut",   "name": "Classic Cut",         "description": "Scissor and clipper work, neck shave and hot towel finish.", "price": 180, "minutes": 45 },
+  { "id": "fade",  "name": "Skin Fade",           "description": "Sharp blend from skin to length, lineup included.",          "price": 200, "minutes": 60 },
+  { "id": "beard", "name": "Beard Trim & Shape",  "description": "Shape, trim and hot towel with beard oil.",                  "price": 120, "minutes": 30 },
+  { "id": "shave", "name": "Hot Towel Shave",     "description": "Traditional straight-razor shave.",                          "price": 150, "minutes": 40 },
+  { "id": "kids",  "name": "Kids Cut (under 12)", "description": "Patient, quick and neat.",                                   "price": 120, "minutes": 30 },
+  { "id": "combo", "name": "The Full Ironbark",   "description": "Fade or cut plus beard trim and hot towel.",                 "price": 290, "minutes": 90 }
+]

@@ -1,0 +1,5 @@
+[
+  { "id": "thabo",  "name": "Thabo Mokoena", "role": "Owner, fade specialist",       "bio": "Trained in Soweto and Cape Town. Thirteen years behind the chair and still the fussiest about a clean lineup." },
+  { "id": "sipho",  "name": "Sipho Dube",    "role": "Senior barber, beards",        "bio": "Straight-razor man. Sipho keeps the beard work and hot shaves at Ironbark honest and traditional." },
+  { "id": "lerato", "name": "Lerato Nkosi",  "role": "Barber, kids and classic cuts", "bio": "Calm hands, quick scissors. The one to ask for when little ones are getting their first proper cut." }
+]
