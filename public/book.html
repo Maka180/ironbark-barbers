@@ -22,32 +22,6 @@
     <section>
       <div class="wrap two top">
         <div>
-           <div class="card advisor" id="advisor">
-  <h3>Not sure what to get?</h3>
-  <p>Describe your hair, or upload a photo, and our Style Advisor will suggest a cut and a barber.</p>
-
-  <form id="advisor-form" novalidate>
-    <label for="advisor-text">Describe your hair or occasion</label>
-    <textarea id="advisor-text" rows="3" maxlength="400" placeholder="e.g. Thick curly hair, low upkeep, I have an interview on Friday"></textarea>
-    <p class="hint">Please don't include personal details. Suggestions are guidance only, and your barber will confirm what suits you.</p>
-    <p class="msg error" id="advisor-msg" role="alert"></p>
-    <button class="btn dark" type="submit" id="advisor-btn">Get a suggestion</button>
-  </form>
-
-  <hr>
-
-  <form id="photo-form" novalidate>
-    <label for="photo-file">Or upload a photo of your hair</label>
-    <input type="file" id="photo-file" accept="image/*">
-    <img id="photo-preview" alt="Preview of your photo" hidden>
-    <label class="check"><input type="checkbox" id="photo-consent">
-      <span>I agree that my photo is sent to Google's Gemini AI service to generate a suggestion. This website does not store it. I am the person in the photo, or their parent or guardian.</span></label>
-    <p class="msg error" id="photo-msg" role="alert"></p>
-    <button class="btn dark" type="submit" id="photo-btn">Analyse my photo</button>
-  </form>
-
-  <div id="advisor-result" hidden aria-live="polite"></div>
-</div>
           <form id="booking-form" class="card" novalidate>
             <label for="service">Service</label>
             <select id="service"></select>
@@ -76,6 +50,33 @@
           </form>
 
           <div class="confirm" id="confirm" hidden role="status"></div>
+
+          <details class="card advisor" id="advisor">
+            <summary>Not sure what to get? Ask the Style Advisor</summary>
+            <p>Describe your hair, or upload a photo, and our Style Advisor will suggest a cut and a barber.</p>
+
+            <form id="advisor-form" novalidate>
+              <label for="advisor-text">Describe your hair or occasion</label>
+              <textarea id="advisor-text" rows="3" maxlength="400" placeholder="e.g. Thick curly hair, low upkeep, I have an interview on Friday"></textarea>
+              <p class="hint">Please don't include personal details. Suggestions are guidance only, and your barber will confirm what suits you.</p>
+              <p class="msg error" id="advisor-msg" role="alert"></p>
+              <button class="btn dark" type="submit" id="advisor-btn">Get a suggestion</button>
+            </form>
+
+            <hr>
+
+            <form id="photo-form" novalidate>
+              <label for="photo-file">Or upload a photo of your hair</label>
+              <input type="file" id="photo-file" accept="image/*">
+              <img id="photo-preview" alt="Preview of your photo" hidden>
+              <label class="check"><input type="checkbox" id="photo-consent">
+                <span>I agree that my photo is sent to Google's Gemini AI service to generate a suggestion. This website does not store it. I am the person in the photo, or their parent or guardian.</span></label>
+              <p class="msg error" id="photo-msg" role="alert"></p>
+              <button class="btn dark" type="submit" id="photo-btn">Analyse my photo</button>
+            </form>
+
+            <div id="advisor-result" hidden aria-live="polite"></div>
+          </details>
         </div>
 
         <aside>

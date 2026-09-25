@@ -4,6 +4,16 @@
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
+  // Open the advisor when someone arrives from the home page button (/book.html#advisor)
+  const openIfLinked = () => {
+    if (location.hash === '#advisor') {
+      card.open = true;
+      card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+  openIfLinked();
+  addEventListener('hashchange', openIfLinked);
+
   let services = [], barbers = [];
   const ready = Promise.all([
     fetch('/api/services').then(r => r.json()),
